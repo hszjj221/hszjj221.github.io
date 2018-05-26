@@ -108,20 +108,24 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Juce的小屋">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="算法 - 快速排序 快速排序是一种较为常见的排序算法，平均时间复杂度为O(logn)  快速排序的代码实现1234567void QuickSort(int array[], int p, int r) &amp;#123;    if (p &amp;lt; r) &amp;#123;        q = GetPos(array, p, r);        QuickSort(array, p, q - 1);">
+<meta property="og:type" content="article">
+<meta property="og:title" content="快速排序">
+<meta property="og:url" content="http://yoursite.com/2018/05/26/快速排序/index.html">
 <meta property="og:site_name" content="Juce的小屋">
+<meta property="og:description" content="算法 - 快速排序 快速排序是一种较为常见的排序算法，平均时间复杂度为O(logn)  快速排序的代码实现1234567void QuickSort(int array[], int p, int r) &amp;#123;    if (p &amp;lt; r) &amp;#123;        q = GetPos(array, p, r);        QuickSort(array, p, q - 1);">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-05-26T06:41:55.956Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Juce的小屋">
+<meta name="twitter:title" content="快速排序">
+<meta name="twitter:description" content="算法 - 快速排序 快速排序是一种较为常见的排序算法，平均时间复杂度为O(logn)  快速排序的代码实现1234567void QuickSort(int array[], int p, int r) &amp;#123;    if (p &amp;lt; r) &amp;#123;        q = GetPos(array, p, r);        QuickSort(array, p, q - 1);">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/05/26/快速排序/"/>
 
 
 
@@ -131,7 +135,7 @@
   };
 </script>
 
-  <title>Juce的小屋</title>
+  <title>快速排序 | Juce的小屋</title>
   
 
 
@@ -178,8 +182,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -216,7 +219,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
     <a href="/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
   </li>
@@ -260,9 +263,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -294,11 +297,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/26/快速排序/" itemprop="url">
-                  快速排序
-                </a>
+          <h1 class="post-title" itemprop="name headline">快速排序
               
             
           </h1>
@@ -361,16 +360,12 @@
       
 
       
-        
-          
-            <h1 id="算法-快速排序"><a href="#算法-快速排序" class="headerlink" title="算法 - 快速排序"></a>算法 - 快速排序</h1><blockquote>
+        <h1 id="算法-快速排序"><a href="#算法-快速排序" class="headerlink" title="算法 - 快速排序"></a>算法 - 快速排序</h1><blockquote>
 <p>快速排序是一种较为常见的排序算法，平均时间复杂度为O(logn)</p>
 </blockquote>
 <p>快速排序的代码实现<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">QuickSort</span><span class="params">(<span class="keyword">int</span> <span class="built_in">array</span>[], <span class="keyword">int</span> p, <span class="keyword">int</span> r)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (p &lt; r) &#123;</span><br><span class="line">        q = GetPos(<span class="built_in">array</span>, p, r);</span><br><span class="line">        QuickSort(<span class="built_in">array</span>, p, q - <span class="number">1</span>);</span><br><span class="line">        QuickSort(<span class="built_in">array</span>, q + <span class="number">1</span>, r);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p><code>GetPos</code> 函数实现：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">GetPos</span><span class="params">(<span class="keyword">int</span> <span class="built_in">array</span>[], <span class="keyword">int</span> p, <span class="keyword">int</span> r)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> j = p;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = p; i &lt; r; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">array</span>[i] &lt; <span class="built_in">array</span>[r]) &#123;</span><br><span class="line">            <span class="keyword">int</span> temp = <span class="built_in">array</span>[i];</span><br><span class="line">            <span class="built_in">array</span>[i] = <span class="built_in">array</span>[j];</span><br><span class="line">            <span class="built_in">array</span>[j] = temp;</span><br><span class="line">            j++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> temp = <span class="built_in">array</span>[r];</span><br><span class="line">    <span class="built_in">array</span>[r] = <span class="built_in">array</span>[j];</span><br><span class="line">    <span class="built_in">array</span>[j] = temp;</span><br><span class="line">    <span class="keyword">return</span> j;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
-          
-        
       
     </div>
 
@@ -390,12 +385,12 @@
       
 
       
+      
+      
 
       
 
       
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -405,14 +400,19 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -433,8 +433,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -479,6 +488,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#算法-快速排序"><span class="nav-number">1.</span> <span class="nav-text">算法 - 快速排序</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -613,6 +638,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.3.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.3.0"></script>
+
+
 
   
 
