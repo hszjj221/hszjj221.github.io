@@ -1,34 +1,112 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const techStack = [
+    { category: 'Languages', items: ['Python', 'Go'] },
+    { category: 'Python Frameworks', items: ['FastAPI', 'Django', 'Celery', 'SQLAlchemy'] },
+    { category: 'Go Frameworks', items: ['Gin', 'Echo', 'gRPC', '标准库'] },
+    { category: 'Databases', items: ['PostgreSQL', 'Redis', 'MongoDB'] },
+    { category: 'Infra', items: ['Docker', 'Kubernetes', 'AWS', '阿里云'] },
+  ]
+
+  const projects = [
+    {
+      name: 'project-alpha',
+      desc: '高并发订单处理系统，支持 10k+ QPS',
+      tech: 'Go, Redis, Kafka, Kubernetes',
+    },
+    {
+      name: 'data-pipeline',
+      desc: '实时数据管道，日处理数据量 1TB+',
+      tech: 'Python, Flink, PostgreSQL',
+    },
+  ]
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="terminal">
+      {/* Header */}
+      <header className="terminal-header">
+        <div className="terminal-buttons">
+          <span className="btn close"></span>
+          <span className="btn minimize"></span>
+          <span className="btn maximize"></span>
+        </div>
+        <span className="terminal-title">俊杰 — Backend Engineer</span>
+      </header>
+
+      {/* Content */}
+      <main className="terminal-content">
+        {/* About Section */}
+        <section className="section">
+          <p className="command">
+            <span className="prompt">$</span> cat about.txt
+          </p>
+          <div className="output">
+            <h1>Backend Engineer</h1>
+            <p>
+              专注高并发系统和分布式架构，主要使用 <span className="highlight">Python</span> 和{' '}
+              <span className="highlight">Go</span>
+            </p>
+            <p>喜欢写干净、可测试的代码</p>
+          </div>
+        </section>
+
+        {/* Tech Stack Section */}
+        <section className="section">
+          <p className="command">
+            <span className="prompt">$</span> ls tech-stack/
+          </p>
+          <div className="output">
+            {techStack.map((stack) => (
+              <div key={stack.category} className="tech-line">
+                <span className="tech-category">{stack.category}/</span>
+                <span className="tech-items">{stack.items.join(', ')}</span>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Projects Section */}
+        <section className="section">
+          <p className="command">
+            <span className="prompt">$</span> ls projects/ -la
+          </p>
+          <div className="output">
+            {projects.map((project) => (
+              <div key={project.name} className="project-card">
+                <div className="project-name">
+                  <span className="dir-icon">📁</span> {project.name}/
+                </div>
+                <div className="project-desc">{project.desc}</div>
+                <div className="project-tech">Tech: {project.tech}</div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section className="section">
+          <p className="command">
+            <span className="prompt">$</span> cat contact.json
+          </p>
+          <div className="output">
+            <pre className="json">
+{`{
+  "github": "https://github.com/hszjj221",
+  "email": "your@email.com"
+}`}
+            </pre>
+          </div>
+        </section>
+
+        {/* Footer */}
+        <section className="section">
+          <p className="command">
+            <span className="prompt">$</span> <span className="cursor">_</span>
+          </p>
+        </section>
+      </main>
+    </div>
   )
 }
 
