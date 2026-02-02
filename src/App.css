@@ -178,6 +178,38 @@ body {
   overflow-x: auto;
 }
 
+/* Pages Links */
+.pages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.page-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background-color: rgba(110, 118, 129, 0.15);
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-size: 13px;
+}
+
+.page-link:hover {
+  background-color: rgba(110, 118, 129, 0.25);
+  border-color: var(--accent-blue);
+  transform: translateY(-2px);
+}
+
+.link-icon {
+  font-size: 14px;
+}
+
 /* Cursor */
 .cursor {
   animation: blink 1s step-end infinite;

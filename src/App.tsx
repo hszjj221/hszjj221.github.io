@@ -84,6 +84,32 @@ function App() {
           </div>
         </section>
 
+        {/* Pages Section */}
+        <section className="section">
+          <p className="command">
+            <span className="prompt">$</span> ls pages/
+          </p>
+          <div className="output">
+            <div className="pages-grid">
+              <a href="https://hszjj221.github.io/2026/" target="_blank" className="page-link">
+                <span className="link-icon">🔗</span> 2026/
+              </a>
+              <a href="https://hszjj221.github.io/tree/" target="_blank" className="page-link">
+                <span className="link-icon">🌳</span> tree/
+              </a>
+              <a href="https://hszjj221.github.io/json/" target="_blank" className="page-link">
+                <span className="link-icon">📋</span> json/
+              </a>
+              <a href="https://hszjj221.github.io/love/" target="_blank" className="page-link">
+                <span className="link-icon">❤️</span> love/
+              </a>
+              <a href="https://hszjj221.github.io/year/" target="_blank" className="page-link">
+                <span className="link-icon">📅</span> year/
+              </a>
+            </div>
+          </div>
+        </section>
+
         {/* Contact Section */}
         <section className="section">
           <p className="command">
